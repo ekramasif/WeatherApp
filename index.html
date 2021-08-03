@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <title>Temperature-API</title>
 </head>
 <style>
@@ -15,8 +16,9 @@
     }
 
     body {
+        font-family: 'Abel', sans-serif;
+        font-size: large;
         margin: 0;
-        font-family: Arial;
         font-size: 17px;
     }
 
@@ -31,8 +33,13 @@
         bottom: 0;
         z-index: -1;
     }
-    text{
-        color:rgb(27, 23, 23);
+
+    text {
+        color: rgb(27, 23, 23);
+    }
+
+    footer {
+        padding: 10%;
     }
 </style>
 
@@ -53,17 +60,22 @@
                     </div>
                 </div>
             </form>
-            
+
             <div class="weather-status text text-center">
                 <img id="icon" src="" alt="">
                 <h1 id="show_city"></h1>
                 <h3><span id="show_temperature"></span>&deg;C</h3>
                 <h1 id="weather_status" class="lead"></h1>
             </div>
-    
-    
+
+
         </div>
     </main>
+    <footer>
+        <div class="text-center">
+            <hi class="lead">Develop By <a href="https://www.linkedin.com/in/ekramasif/">Ekram Asif</a></hi>
+        </div>
+    </footer>
 
 
     <script>
