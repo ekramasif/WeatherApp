@@ -5,44 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="asset/fabicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <title>Temperature-API</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Today's Weather</title>
 </head>
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Abel', sans-serif;
-        font-size: large;
-        margin: 0;
-        font-size: 17px;
-    }
-
-    #myVideo {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
-    }
-
-    text {
-        color: rgb(27, 23, 23);
-    }
-
-    footer {
-        padding: 10%;
-    }
-</style>
-
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="asset/BG-2.mp4" type="video/mp4">
@@ -77,34 +46,8 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 
-    <script>
-        const apiKey = 'b6cc4392568a3586e950307c86a22bbd';
-        const apiBase = 'https://api.openweathermap.org/data/2.5/weather';
-
-        const getWeatherData = city => {
-            const url = `${apiBase}?q=${city}&units=metric&appid=${apiKey}`;
-            fetch(url)
-                .then(response => response.json())
-                .then(data => updateUI(data))
-        }
-
-        const searchBtn = document.getElementById('search_button');
-        searchBtn.addEventListener('click', () => {
-            const inputCity = document.getElementById('city').value;
-            getWeatherData(inputCity)
-        })
-
-        const updateUI = data => {
-            document.getElementById('show_city').innerText = data.name || "Unknown Location!";
-            document.getElementById('show_temperature').innerText = data.main.temp;
-            document.getElementById('weather_status').innerText = data.weather[0].main;
-            document.getElementById('icon').setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-            document.getElementById('city').value = "";
-        }
-
-        getWeatherData('Chittagong');
-    </script>
 
 
 </body>
