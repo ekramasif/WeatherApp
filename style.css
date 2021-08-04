@@ -1,0 +1,30 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    font-size: large;
+    margin: 0;
+}
+
+#myVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+text {
+    color: rgb(27, 23, 23);
+}
+
+footer {
+    padding: 10%;
+}
