@@ -1,3 +1,9 @@
+var placesAutocomplete = places({
+    apiKey: "AIzaSyAxjM0mqHXT1jeFLNtsbe7GJAnMoAD-gmg",
+    container: document.querySelector('#city')
+});
+
+
 const apiKey = 'b6cc4392568a3586e950307c86a22bbd';
 const apiBase = 'https://api.openweathermap.org/data/2.5/weather';
 

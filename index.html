@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
     <link rel="shortcut icon" href="asset/fabicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Today's Weather</title>
 </head>
+
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="asset/BG-2.mp4" type="video/mp4">
@@ -24,8 +26,8 @@
             <form class="col-md-6 m-auto py-5">
                 <div class="input-group mb-3">
                     <input type="text" id="city" class="form-control" placeholder="Enter a location for Weather ...">
-                    <div class="input-group-append">
-                        <button type="button" class="btn btn-success" id="search_button">Search</button>
+                    <div class="input-group">
+                        <br><br><button type="button" class="btn btn-success col-md-3 m-auto" id="search_button">Search</button>
                     </div>
                 </div>
             </form>
@@ -47,8 +49,6 @@
     </footer>
 
     <script src="script.js"></script>
-
-
 
 </body>
 
